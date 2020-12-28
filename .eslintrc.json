@@ -1,0 +1,28 @@
+{
+    "env": {
+      "browser": true,
+      "amd": true,
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint"
+    ],
+    "ignorePatterns": [
+        "node_modules/",
+        "e2e",
+        "karma.conf.js"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020, 
+      "sourceType": "module"
+    },
+    "rules": {}
+  }
