@@ -4,16 +4,8 @@
 <hr/>
 <div class="row">
     <div class="col-12">
-        <a href="#" class="list-group-item d-flex my-2 justify-content-between align-items-center" *ngFor="let recipe of recipes">
-            <div class="">
-                <h4 class="list-group-item-heading text-decoration-none text-dark">{{recipe.name}}</h4>
-                <p class="list-group-item-text text-decoration-none text-dark">{{recipe.desc}}</p>
-            </div>
-            <span class="">
-                    <img [src]="recipe.imagePath" alt="" style="max-height: 50px;" class="fluid">
-            </span>
-        </a>
-        <app-recipe-item></app-recipe-item>
+        <app-recipe-item *ngFor="let recipeItem of recipes" [recipe]="recipeItem"
+        (selectedRecipe)="onSelectedRecipe(recipeItem)"
+        ></app-recipe-item>
     </div>
 </div>
-

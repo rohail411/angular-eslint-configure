@@ -1,6 +1,6 @@
 <div class="d-flex flex-column">
-    <h3>Recipe name</h3>
-    <img src="" alt="" class="img-fluid">
+    <h3>{{recipe.name}}</h3>
+    <img [src]="recipe.imagePath" alt="" class="img-fluid">
     <div class="btn-group btn-inline" role="group">
         <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           Action
@@ -11,5 +11,5 @@
           <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
         </ul>
       </div>
-      <p>Description</p>
+      <p>{{recipe.desc}}</p>
 </div>

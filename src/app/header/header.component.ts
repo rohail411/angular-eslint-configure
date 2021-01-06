@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-    selector: 'app-header',
-    templateUrl:'./header.component.html'
+  selector: 'app-header',
+  templateUrl: './header.component.html',
 })
+export class HeaderComponent {
+  @Output() headerNav = new EventEmitter<string>();
+  activeFeature = 'recipe';
 
-export class HeaderComponent{
-
+  onNavChange(itemName: string) {
+    this.headerNav.emit(itemName);
+    this.activeFeature = itemName;
+  }
 }
