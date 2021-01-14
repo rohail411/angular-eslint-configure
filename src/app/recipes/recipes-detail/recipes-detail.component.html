@@ -6,10 +6,19 @@
           Action
         </button>
         <ul class="dropdown-menu" [ngClass]="{'show':isOpen}"  aria-labelledby="btnGroupDrop1">
-          <li><a class="dropdown-item" href="#">Add to cart</a></li>
+          <li><a class="dropdown-item" (click)="onAddToShoppingList()">Add to cart</a></li>
           <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
           <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
         </ul>
       </div>
       <p>{{recipe.desc}}</p>
+</div>
+<div class="row">
+  <div class="col-12">
+    <ul class="list-groug">
+      <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+          {{ingredient.name}}-{{ingredient.amount}}
+      </li>
+    </ul>
+  </div>
 </div>
